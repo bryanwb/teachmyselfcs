@@ -38,11 +38,11 @@ and a sizable annual budget.
 Meanwhile, my bookshelf continued to swell with large books that I would start
 but never complete. Ray Kurzweil's Age of Spiritual Machines, The Singularity is
 Near, the Selfish Gene, The Black Swan, Elementary Game Theory, you get the picture. I was tired of
-starting books but rarely finishing them. It was time for a change. I started taking Ritalin and my world
-turned upside down. My reading speed went from 10 pages an hour to 30-40. I read
+starting books but rarely finishing them. It was time for a change. I decided to treat my ADHD and I started taking Ritalin.
+My world turned upside down. My reading speed went from 10 pages an hour to 30-40. I read
 voraciously and could spend all day doing it. I got into Linux and spent a
 weekend configuring wifi on my linux laptop. I read Dive into Python and dove
-in. I read K&R and couldn't figure out pointers but loved trying. Fuck my
+in. I read K&R and failed to understand pointers but loved trying. Fuck my
 managerial career, I wanted to code all day. So I quit my stable, well-paid job
 in the U.S. Foreign Service and got a job as a Linux System Administrator. As a
 sysadmin I wrote 1000s of lines of Ruby code to automate my employers
@@ -55,29 +55,48 @@ for my work. That's not a stopping point. I love computers and I love programmin
 To that end, I am embarking on reading all the books recommended by [Teach Yourself CS](https://teachyourselfcs.com/)
 and placing my problem solutions in this repository.
 
-Here is my adapted list of books and my current status on each. I have added a few entries
-because I subjectively feel they are important. Most notably, I am a fanboy of
-functional programming and Haskell but I am not certain that functional programming
-is a fundamental skill in the realm of Computer Science nor that it is the future
-of our discipline.
+Here is my adapted list of books and my current status on each. I have added a
+few entries because I had committed myself to reading them before discovering
+[Teach Yourself CS](https://teachyourselfcs.com/).  Most notably, there is 
+haskell book at the front of the list that I read immediately prior to discovering
+the [Teach Yourself CS](https://teachyourselfcs.com/) website.
 
 
 | Book                                                                                        | Status          | Exercises Completed | Date Finished |
 |---------------------------------------------------------------------------------------------|:---------------:|--------------------:|:-------------:|
-| [LearnYouAHaskell](https://mitpress.mit.edu/sicp/full-text/book/book.html)                  | DONE            | No                  | 15 Feb 2017   |  
-| [Real World Haskell](http://book.realworldhaskell.org/)                                     | in-progress     |                     |               |
-| [Computer Science from the Bottum Up](https://www.bottomupcs.com/)                          |                 |                     |               |
-| [Mathematics for CS](https://courses.csail.mit.edu/6.042/spring17/mcs.pdf)                  |                 |                     |               |
-| [Nand2Tetris](http://www.nand2tetris.org/)                                                  |                 |                     |               |
-| [Algorithm Design Manual](https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/) |    |                     |               |
-| [Operating Systems, 3 easy pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)                  |                 |                     |               |
-| [Computer Networking](https://smile.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/) |    |                     |               |
-| [Dragon Book](https://smile.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811) |             |                     |               |
-| [Distributed Systems](https://www.amazon.com/Distributed-Systems-Principles-Andrew-Tanenbaum/dp/153028175X) | |                     |               |
+|[LearnYouAHaskell](https://mitpress.mit.edu/sicp/full-text/book/book.html)                   | DONE            | No                  | 15 Feb 2017   | 
+|~~ [Real World Haskell](http://book.realworldhaskell.org/)~~                                 | STOPPED at ch 6 |                     |               |
+|[Nand2Tetris](http://www.nand2tetris.org/)                                                   |                 |                     |                | 
+|[Computer Science from the Bottum Up](https://www.bottomupcs.com/)                          |                 |                     |               |
+|[Algorithm Design Manual](https://smile.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/) |     |                     |               |
+|[Mathematics for CS](https://courses.csail.mit.edu/6.042/spring17/mcs.pdf)                   |                 |                     |               |
+|[How to Solve It](https://www.amazon.co.uk/How-Solve-Mathematical-Princeton-Science/dp/069116407X/ref=dp_ob_title_bk) |  |           |               |
+|[Operating Systems, 3 easy pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)                   |                 |                     |               |
+|[Computer Networking, Top Down Approach](https://smile.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/) |    |   |               |
+|[Dragon Book](https://smile.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811) |              |                     |               |
+|[Distributed Systems](https://www.amazon.com/Distributed-Systems-Principles-Andrew-Tanenbaum/dp/153028175X) |  |                     |               |
+
+
+note: I have stopped reading Real World Haskell due to increasing frustration
+with how the material was presented. I have added [HaskellBook](http://haskellbook.com/) in its place on the "Fun" list.
+
+note1: I have added [Computer Science from the Bottum Up](https://www.bottomupcs.com/) as it is a nice hands-on tutorial writing low-level C programs on Linux.
 
 
 To be frank, this process is more than a little daunting. I have two small children and my wife has a demanding career of her own.
 This might take me five years.
+
+## Fun projects/reading
+
+| Project                                                                                     | Status          | Exercises Completed | Date Finished |
+|---------------------------------------------------------------------------------------------|:---------------:|--------------------:|:-------------:|
+|[BuildYourOwnTextEditor](http://viewsourcecode.org/snaptoken/kilo/index.html)               | Started         | No                  |               | 
+|[Haskell Book](http://haskellbook.com/)                                                     |                 |                     |                |
+
+## Tooling
+
+When and wherever possible I will do all work in Emacs.
+
 
 Bryan W. Berry
 March 15, 2017
