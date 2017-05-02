@@ -16,9 +16,9 @@ foggiest how queuing theory works or even how to implement quicksort.
 ## A biographical aside
 
 The odd thing is that I actually have a degree in computer science. I discovered
-programming mid-way through my Junior year in university. It was immediately
-obvious that computer science would be far more rewarding emotionally and
-financially than my then major in economics. It didn't go smoothly. I took
+programming mid-way through my junior year in university. It was immediately
+obvious that computer science would be far more rewarding both emotionally and
+financially than my then major in economics. Unfortunately, it did not go smoothly. I took
 all the courses I could possibly take concurrently in order to graduate before
 I ran out of money. I was a solid B student but earned a number of Cs. One of
 my professors discouraged me from staying in the major.
@@ -26,9 +26,9 @@ my professors discouraged me from staying in the major.
 Once I finally graduated, I struggled to hold a job programming. I just couldn't
 still at a desk for 8 hours a day or even concentrate on programming problems
 for that length of time. I was diagnosed with ADHD as a young child but my
-parents chose not medicate me as I never had any problems in school. However, it was
-a big problem for my job as a programmer. I then decided to pursue
-another passion of mine, travel. I found a job with the U.S. Foreign Service as a
+parents chose not medicate me as I never had any (big) problems in school. However, it was
+a big problem for my job as a programmer. One year of university, I decided to pursue
+another passion of mine, travel. I took a job with the U.S. Foreign Service as a
 Window System Administrator. The job took me Tel Aviv, Hong Kong, and finally
 Kathmandu. The work wasn't terrifically interesting but the lifestyle was
 awesome. After five years in the service I found myself managing the IT
