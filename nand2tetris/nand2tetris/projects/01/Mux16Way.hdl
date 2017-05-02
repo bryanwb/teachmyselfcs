@@ -1,0 +1,28 @@
+// Author: Bryan W. Berry
+// File name: projects/01/Mux8Way.hdl
+
+/**
+ * 8-way 1-bit multiplexor:
+ * out = a if sel == 000
+ *       b if sel == 001
+ *       c if sel == 010
+ *       d if sel == 011
+ *       e if sel == 100
+ *       f if sel == 101
+ *       g if sel == 110
+ *       h if sel == 111
+ */
+
+CHIP Mux16Way {
+        IN in[16], sel[4];
+//        IN a, b, c, d, e, f, g, h, i, j, k, l, m, n, o sel[3];
+        OUT out;
+
+        PARTS:
+        Mux8Way(a=in[0], b=in[1], c=in[2], d=in[3], e=in[4], f=in[5], g=in[6],
+        h=in[7], sel=sel[0..2], out=out0);
+        Mux8Way(a=in[8], b=in[9], c=in[10], d=in[11], e=in[12], f=in[13], g=in[14],
+        h=in[15], sel=sel[0..2], out=out1);
+        And(a=sel[3], b=sel[2], out=sel1);
+        Mux(a=out0, b=out1, sel=sel1, out=out);
+}

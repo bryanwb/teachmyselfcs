@@ -1,0 +1,36 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/DMux8Way.hdl
+
+/**
+ * 8-way demultiplexor:
+ * {a, b, c, d, e, f, g, h} = {in, 0, 0, 0, 0, 0, 0, 0} if sel == 000
+ *                            {0, in, 0, 0, 0, 0, 0, 0} if sel == 001
+ *                            etc.
+ *                            {0, 0, 0, 0, 0, 0, 0, in} if sel == 111
+ */
+
+CHIP DMux8Way {
+        IN in, sel[3];
+        OUT a, b, c, d, e, f, g, h;
+        
+        PARTS:
+        And(a=sel[2], b=sel[1], out=geq6);
+        Or(a=sel[2], b=sel[1], out=geq2);
+
+        Not(in=geq2, out=le2);
+        Xor(a=geq6, b=sel[1], out=le4geq2);
+
+        Xor(a=geq2, b=sel[1], out=le6geq4);
+        
+        DMux(in=in, sel=sel[0], a=a1, b=b1);
+        DMux(in=in, sel=sel[0], a=c1, b=d1);
+        DMux(in=in, sel=sel[0], a=e1, b=f1);
+        DMux(in=in, sel=sel[0], a=g1, b=h1);
+        
+        And2Way(a=a1, b=b1, c=le2, d=le2, x=a, y=b);
+        And2Way(a=c1, b=d1, c=le4geq2, d=le4geq2, x=c, y=d);
+        And2Way(a=c1, b=d1, c=le6geq4, d=le6geq4, x=e, y=f);
+        And2Way(a=g1, b=h1, c=geq6, d=geq6, x=g, y=h);
+}

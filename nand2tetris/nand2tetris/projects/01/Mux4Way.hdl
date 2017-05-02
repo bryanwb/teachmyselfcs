@@ -1,0 +1,20 @@
+// Author: Bryan W. Berry
+// File name: projects/01/Mux4Way.hdl
+
+/**
+ * 4-way 1-bit multiplexor:
+ * out = a if sel == 00
+ *       b if sel == 01
+ *       c if sel == 10
+ *       d if sel == 11
+ */
+
+CHIP Mux4Way {
+        IN a, b, c, d, sel[2];
+        OUT out;
+
+        PARTS:
+        Mux(a=a, b=b, sel=sel[0], out=out0);
+        Mux(a=c, b=d, sel=sel[0], out=out1);
+        Mux(a=out0, b=out1, sel=sel[1], out=out);
+}

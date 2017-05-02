@@ -1,0 +1,10 @@
+// Author: Bryan W. Berry
+
+CHIP And2Way {
+        IN a, b, c, d;
+        OUT x, y;
+
+        PARTS:
+        And(a=a, b=c, out=x);
+        And(a=b, b=d, out=y);
+}

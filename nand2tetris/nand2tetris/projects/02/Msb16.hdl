@@ -1,0 +1,10 @@
+// returns the most significant bit for 16-bit bus
+
+
+CHIP Msb16 {
+        IN in[16];
+        OUT msb;
+
+        PARTS:
+        Mux(a=in[15], b=false, sel=false, out=msb);
+}

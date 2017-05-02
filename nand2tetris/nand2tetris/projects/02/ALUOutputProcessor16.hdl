@@ -1,0 +1,28 @@
+// Author: Bryan W. Berry
+
+/**
+ * 16-bit Output Processor
+ * zero, then negate depending on control bits
+ * in: 16-bit input
+ * no: negate output
+ * outputs:
+ * out: 16-bit number
+ * zr: if output is zero
+ * ng: if output is negative
+ */
+
+CHIP ALUOutputProcessor16 {
+        IN in[16], no;
+        OUT out[16], zr, ng;
+
+        PARTS:
+        //Negate16(in=in, out=outneg);
+        Not16(in=in, out=outneg);
+        Mux16(a=in, b=outneg, sel=no, out=outmux);
+        Or16(a=outmux, b[0..15]=false, out=out);
+        Or16Way(in=in, out=anypos);
+        Not(in=anypos, out=zr);
+        And16(a=outmux, b[0..14]=false, b[15]=true, out=outand16);
+        Or16Way(in=outand16, out=ng);
+}
+

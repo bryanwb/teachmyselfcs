@@ -1,0 +1,21 @@
+// Author: Bryan W. Berry
+
+/**
+ * 16-bit Input Processor
+ * zero, then negate depending on control bits
+ * in: 16-bit input
+ * zero: zero input
+ * neg: negate input
+ */
+
+CHIP ALUInputProcessor16 {
+        IN in[16], zero, neg;
+        OUT out[16];
+
+        PARTS:
+        Mux16(a=in, b[0..15]=false, sel=zero, out=outz);
+        //Negate16(in=outz, out=outneg);
+        Not16(in=outz, out=outneg);
+        Mux16(a=outz, b=outneg, sel=neg, out=out);
+}
+

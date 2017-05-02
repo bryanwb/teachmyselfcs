@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nand2Tetris Setup Guide for Apple OS X</title>
+  <meta name="author" content="Yong Bakos on behalf of Shimon Schocken">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body>
+  <h1>Nand2Tetris Setup Guide for Apple OS X</h1>
+  <p>This guide describes how to install and run the Nand2Tetris software suite on Apple OS X.</p>
+  <h2>Install Java</h2>
+  <p>Older versions of Apple OS X come with Java pre-installed, so there may be no need to install Java on your Mac. Furthermore, there is no need to modify your Java CLASSPATH.</p>
+  <p>To find out if Java is already installed on your Mac, start the Terminal application (Applications - Utilities - Terminal). Once the terminal window appears, type the following:</p>
+  <p><tt>java -version</tt></p>
+  <p>Depending on what happens next, you may or may not need to install Java.</p>
+  <ul>
+    <li>If you see an output on the console such as <tt>java version "1.8.0_31"</tt>, then Java is already installed. You can proceed to install the Nand2Tetris software suite.</li>
+    <li>If a window appears, stating <em>To use the "java" command-line tool you need to install a JDK</em>, then click the <em>More Info...</em> button. A web page will open, and you should follow the instructions to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" title="Download and install Java">download and install Java</a>.</li>
+  </ul>
+  <p>After installing Java, verify the installation by starting a new Terminal window and typing <tt>java -version</tt>. You should see something like <tt>java version "1.8.0_31"</tt>.</p>
+  <h2>Install the Nand2Tetris Software Suite</h2>
+  <p>Double-click the .zip file you've downloaded from the <a href="http://nand2tetris.org/software.php" title="Nand2Tetris Software Suite">Nand2Tetris Software page</a>. OS X will automatically extract the contents of the .zip file to a folder. Move this folder to your desktop.</p>
+  <p>To run any one of the Nand2Tetris tools on OS X, you must use the command line. Start the Terminal application (Applications - Utilities - Terminal). Once the terminal window appears, type the following:</p>
+  <p><tt>~/Desktop/nand2tetris/tools/HardwareSimulator.sh</tt></p>
+  <p>(The first character, called a "tilde," is located to the left of the number <tt>1</tt> key on most keyboards.) At this point, the supplied <i>Hardware Simulator</i> should started running in a new window.</p>
+  <p>From now on, when you wish to run the supplied <i>Hardware Simulator</i>, simply execute the command shown above.</p>
+
+  <p>All the supplied <i>Nand2Tetris</i> software tools are started in a similar way: just replace <tt>HardwareSimulator</tt> with the name of the software tool you wish to run.</p>
+  <table>
+    <tbody><tr>
+      <td>Tool</td>
+      <td>Command</td>
+    </tr>
+    <tr>
+      <td>Hardware Simulator</td>
+      <td><tt>HardwareSimulator.sh</tt></td>
+    </tr>
+    <tr>
+      <td>CPU Emulator</td>
+      <td><tt>CPUEmulator.sh</tt></td>
+    </tr>
+    <tr>
+      <td>Assembler</td>
+      <td><tt>Assembler.sh</tt></td>
+    </tr>
+    <tr>
+      <td>VM Emulator</td>
+      <td><tt>VMEmulator.sh</tt></td>
+    </tr>
+    <tr>
+      <td>Jack Compiler</td>
+      <td><tt>JackCompiler.sh</tt></td>
+    </tr>
+  </tbody></table>
+
+  <p>To run any of these tools, open a Terminal window and type the following, replacing <tt>COMMAND</tt> with one of the commands listed above.</p>
+  <p><tt>~/Desktop/nand2tetris/tools/COMMAND</tt></p>
+  
+  <h3>That's a lot to type. Can I shorten this?</h3>
+  <p>Indeed you can. Open a Terminal window and type (once and for all):</p>
+  <p><tt>echo "export PATH=$PATH:~/Desktop/nand2tetris/tools" &gt;&gt; ~/.bash_profile ; source ~/.bash_profile</tt></p>
+  <p>You can now run any of the supplied <i>Nand2Tetris</i> software tools by typing just the command. For example:</p>
+  <p><tt>HardwareSimulator.sh</tt></p>
+
+  <h3>I'm Working on Project 9. How Do I Compile My <tt>.jack</tt> Files?</h3>
+  <p>Unlike the simulators, which feature an interactive user interface, the Jack Compiler is a terminal-oriented application. In order to run it, you must supply the name of the file or folder that you wish to compile. For example, suppose you wish to compile all <tt>.jack</tt> files stored in the folder <tt>projects/09/Square</tt> (that's a folder called <tt>Square</tt>, located in the <tt>09</tt> folder, which is located in the <tt>projects</tt> folder). To do so, open a Terminal window and type:</p>
+  <p><tt>JackCompiler.sh ~/Desktop/nand2tetris/projects/09/Square</tt></p>
+  <p>This results in either a successful compilation of the <tt>.jack</tt> files in <tt>Square</tt>, or some compilation errors.</p>
+
+  <h3>Why Am I Seeing a "Command Not Found" Message?</h3>
+  <p>The likely reason is that your folder location is not on the Mac OS X desktop, which is assumed by the instructions above. Replace <tt>Desktop</tt> above with the correct path to your <tt>nand2tetris/tools</tt> folder, or move your <tt>nand2tetris</tt> folder to your desktop.</p>
+</body>
+</html>
